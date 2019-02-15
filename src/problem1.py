@@ -140,7 +140,7 @@ def run_test_problem1a():
     print_summary_of_test_results(test_results)
 
     # -------------------------------------------------------------------------
-    # TO DO: 2 (continued).
+    # done: 2 (continued).
     # Below this comment, add 2 more test cases of your own choosing.
     # You do NOT need to use the above form.  Instead, use the usual:
     #   expected = XXX
@@ -253,7 +253,7 @@ def problem1b(m, f):
            since there are 44 primes between 5 and 200.
      """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # done: 6. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     ###########################################################################
@@ -354,7 +354,7 @@ def problem1c(n):
            and the sum of the digits in 223092870 is 33.
     """
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # done: 7. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -368,6 +368,14 @@ def problem1c(n):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 20 minutes.
     # -------------------------------------------------------------------------
+
+    if n >= 2:
+        total = 1
+        for k in range(2, (n + 1)):
+            if is_prime(k):
+                total = total * k
+        sum = sum_of_digits(total)
+        return sum
 
 
 ###############################################################################
